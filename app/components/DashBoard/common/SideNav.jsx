@@ -31,13 +31,12 @@ const SideNav = () => {
   const [open, setOpen] = useState(false);
 
   const isActive = (item) => {
-    if (item === "Dashboard") return pathname === "/dashboard";
+    if (item === "Dashboard") return pathname === "/";
     return pathname.includes(item.toLowerCase());
   };
 
   const handleClick = (item) => {
-    const path =
-      item === "Dashboard" ? "/dashboard" : `/dashboard/${item.toLowerCase()}`;
+    const path = item === "Dashboard" ? "/" : `/${item.toLowerCase()}`;
     router.push(path);
   };
 

@@ -4,6 +4,9 @@ import SideNav from "@/app/components/DashBoard/common/SideNav";
 import TopNav from "@/app/components/DashBoard/common/TopNav";
 import Footer from "@/app/components/DashBoard/common/Footer";
 import { ThemeProvider } from "@/app/context/ThemeContext";
+import Cookies from "js-cookie";
+import { cookies } from "next/headers";
+// import Cookies from "js-cookie";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,12 +24,12 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
-  //   const token = await cookies();
-  //   const myToken = token.get("token")?.value;
+  const token = await cookies();
+  const myToken = token.get("token")?.value;
 
-  //   if (!myToken) {
-  //     return redirect("/login");
-  //   }
+  if (!myToken) {
+    return redirect("/login");
+  }
 
   return (
     <html lang="en">
