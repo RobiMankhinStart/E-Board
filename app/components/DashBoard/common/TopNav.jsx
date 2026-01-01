@@ -7,8 +7,9 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { IoChatbubblesOutline } from "react-icons/io5";
 import { MdOutlineNotificationImportant } from "react-icons/md";
 import Image from "next/image";
-import ThemeToggle from "@/app/components/common/ThemeToggle";
+// import ThemeToggle from "@/app/components/common/ThemeToggle";
 import avator from "../../../../public/Avatar.png";
+import ThemeToggle from "./ThemeToggle";
 
 const TopNav = () => {
   return (
