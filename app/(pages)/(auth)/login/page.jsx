@@ -36,7 +36,7 @@ export default function page() {
         // document.cookie = `token=${data.data.accessToken}`;
         // console.log("first");
         // console.log("Token from API:", data.data.accessToken);
-        console.log("Token from Cookies:", Cookies.get("token"));
+        console.log("Token from Cookies:", Cookies.get("dashtoken"));
 
         toast.success("Login successful!");
         setTimeout(() => router.push("/"), 500);

@@ -6,6 +6,8 @@ import Footer from "@/app/components/DashBoard/common/Footer";
 import { ThemeProvider } from "@/app/context/ThemeContext";
 import Cookies from "js-cookie";
 import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
+
 // import Cookies from "js-cookie";
 
 const geistSans = Geist({
@@ -25,7 +27,7 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
   const token = await cookies();
-  const myToken = token.get("token")?.value;
+  const myToken = token.get("dashtoken")?.value;
 
   if (!myToken) {
     return redirect("/login");
