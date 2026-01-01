@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+
+/* LIGHT THEME */
+:root {
+  --background: #ffffff;
+  --background-second: #f5f5fa;
+  --foreground: #171717;
+
+  --card-bg: #f9f9f9;
+  --card-border: #e5e5ea;
+  --input-bg: #f5f5fa;
+
+  --text-primary: #9a9aaf;
+  --text-secondary: #7e7e8f;
+  --text-muted: #989898;
+  --text-hover: #e2cece;
+
+  --hover-bg: #f5f5f5;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* DARK THEME */
+html.dark {
+  --background: #3f0f0f;
+  --background-second: #828292;
+
+  --foreground: #e8e8e8;
+
+  --card-bg: #1a1a1a;
+  --card-border: #2d2d2d;
+  --input-bg: #1f1f2e;
+  --text-hover: #292323;
+  --text-primary: #bbbbce;
+  --text-secondary: #cacadb;
+  --text-muted: #888899;
+
+  --hover-bg: #504c4c;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+/* Tailwind Theme Tokens */
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+}
+
+/* Map CSS vars to Tailwind colors */
+@theme inline {
+  --color-primary: var(--text-primary);
+  --color-secondary: var(--text-secondary);
+  --color-muted: var(--text-muted);
+  --color-bg: var(--hover-bg);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-bgsecond: var(--background-second);
+  --color-textHover: var(--text-hover);
+
+  /* Use Inter as default font */
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Swiper Styles */
+.swiper-pagination {
+  bottom: 0px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background: #c7c7c7 !important;
+  opacity: 1 !important;
+  margin: 0 5px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #000 !important;
+  transform: scale(1.3);
+}
