@@ -7,7 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import Cookies from "js-cookie";
 import "react-toastify/dist/ReactToastify.css";
 
-export default function page() {
+export default function Page() {
   const router = useRouter();
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
