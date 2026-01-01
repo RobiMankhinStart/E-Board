@@ -8,7 +8,7 @@ import React, { useEffect, useState } from "react";
 import { GoHome } from "react-icons/go";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
-const page = () => {
+const Page = () => {
   const [products, setProducts] = useState([]);
   console.log("products", products);
   useEffect(() => {
@@ -52,4 +52,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
