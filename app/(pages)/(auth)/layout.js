@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/app/context/ThemeContext";
 
 export default async function RootLayout({ children }) {
   const token = await cookies();
-  const myToken = token.get("token")?.value;
+  const myToken = token.get("dashtoken")?.value;
 
   return (
     <html lang="en">

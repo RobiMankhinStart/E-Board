@@ -32,7 +32,7 @@ export default function page() {
         // ..............
         // ....... cookie
         // Authorization
-        Cookies.set("token", data.data.accessToken, { expires: 7 });
+        Cookies.set("dashtoken", data.data.accessToken, { expires: 7 });
         // document.cookie = `token=${data.data.accessToken}`;
         // console.log("first");
         // console.log("Token from API:", data.data.accessToken);
