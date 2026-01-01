@@ -10,6 +10,8 @@ import Image from "next/image";
 // import ThemeToggle from "@/app/components/common/ThemeToggle";
 import avator from "../../../../public/Avatar.png";
 import ThemeToggle from "./ThemeToggle";
+import Link from "next/link";
+import { FiUser } from "react-icons/fi";
 
 const TopNav = () => {
   return (
@@ -95,6 +97,13 @@ const TopNav = () => {
             hover:scale-110 cursor-pointer duration-300
           "
         />
+        <Link href="/login">
+          <FiUser
+            className=" text-secondary dark:text-gray-400 
+            p-1 size-9 rounded-full shadow-md shadow-emerald-600
+                md:text-2xl lg:text-[32px] cursor-pointer hover:text-[#989898] dark:hover:text-gray-300 hover:scale-110 duration-300 transition-all"
+          />
+        </Link>
 
         {/* Theme toggle always visible */}
         <ThemeToggle />
