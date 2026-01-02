@@ -9,7 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function Page() {
   const router = useRouter();
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+
   const [formData, setFormData] = useState({
     username: "",
     email: "",
